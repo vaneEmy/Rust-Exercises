@@ -24,4 +24,12 @@ fn main(){
             if c1 == 2 && c2 == 2 { break 'outer_for}
         }
     }
+
+    println!("------ Arrays / Vectors -------");
+    let group : [&str; 4] = ["Mark", "Larry", "Bill", "Steve"];
+
+    for n in 0..group.len(){
+        println!("Current Person : {}", group[n]);
+    }
+
 }
