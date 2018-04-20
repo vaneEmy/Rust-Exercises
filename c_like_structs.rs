@@ -20,6 +20,16 @@ fn main(){
     let blue = Color{ blue:230, .. link_color};
     println!("Blue = rgb({}, {}, {})", blue.red, blue.green, blue.blue);
 
+    // destructure the instance using a 'let' binding, this will not desctruct blue instance
     let Color {red: r, green: g, blue:b} = blue;
-    print!("Blue = rgb({}, {}, {})", r, g, b);
+    println!("Blue = rgb({}, {}, {})", r, g, b);
+
+    // creating an instance via functions & accessing its fields
+    let midnightblue = get_midnightblue_color();
+    println!("Midnight Blue = rgb({}, {}, {})", midnightblue.red, midnightblue.green, midnightblue.blue); //Midnight Blue = rgb(25, 25, 112)}
+
+}
+
+fn get_midnightblue_color() -> Color{
+    Color {red: 25, green: 25, blue: 122}
 }
