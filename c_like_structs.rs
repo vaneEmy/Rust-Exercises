@@ -15,4 +15,8 @@ fn main(){
     let mut link_color = Color{red: 0, green: 0, blue: 255};
     link_color.blue = 238;
     println!("Link color = rgb({}, {}, {})", link_color.red, link_color.green, link_color.blue);
+
+    // copy elements from another instance
+    let blue = Color{ blue:230, .. link_color};
+    println!("Blue = rgb({}, {}, {})", blue.red, blue.green, blue.blue);
 }
