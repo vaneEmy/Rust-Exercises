@@ -19,4 +19,7 @@ fn main(){
     // copy elements from another instance
     let blue = Color{ blue:230, .. link_color};
     println!("Blue = rgb({}, {}, {})", blue.red, blue.green, blue.blue);
+
+    let Color {red: r, green: g, blue:b} = blue;
+    print!("Blue = rgb({}, {}, {})", r, g, b);
 }
