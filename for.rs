@@ -32,4 +32,10 @@ fn main(){
         println!("Current Person : {}", group[n]);
     }
 
+    println!("------ Arrays / Vectors  Iter()-------");
+    
+    for person in group.iter(){
+        println!("Current person: {}", person);
+    }
+
 }
