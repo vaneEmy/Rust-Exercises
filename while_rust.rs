@@ -19,4 +19,16 @@ fn main(){
         b += 1;
     }
 
+    let mut c1 = 1;
+    //set label output_while
+    'outer_while: while c1 < 6{
+        let mut c2 = 1;
+        'inner_while: while c2 < 6{
+                println!("Current Value: [{}][{}]", c1, c2);
+                if c1 == 2 && c2 == 2{ break 'outer_while}
+                c2 += 1;         
+            }
+        c1 += 1;
+    }
+
 }
