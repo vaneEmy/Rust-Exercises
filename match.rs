@@ -7,12 +7,24 @@ fn main() {
         22 => "XL",
         _ => "Not available",
     };
-    println!("{}", tshirt_size);
+    println!("Shirt size: {}", tshirt_size);
 
     let is_allowed = false;
     let list_type = match is_allowed{
         true => "Full",
         false => "Restricted"
     };
-    println!("{}", list_type);
+    println!("List type: {}", list_type);
+
+    let marks_paper_a: u8 = 25;
+    let marks_paper_b: u8 = 30;
+    let output = match(marks_paper_a, marks_paper_b){
+        (50, 50) => "Full marks for both papers",
+        (50, _) => "Full marks for paper A",
+        (_, 59) => "Full marks for paper B",
+        (x, y) if x > 25 && y > 25 => "Good",
+        (_,_) => "Work hard"
+    };
+
+    println!("{}", output);
 }
