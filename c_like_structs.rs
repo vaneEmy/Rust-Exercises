@@ -28,6 +28,8 @@ fn main(){
     let midnightblue = get_midnightblue_color();
     println!("Midnight Blue = rgb({}, {}, {})", midnightblue.red, midnightblue.green, midnightblue.blue); //Midnight Blue = rgb(25, 25, 112)}
 
+    let Color{red: r, green: g, blue: b} = get_midnightblue_color();
+    println!("Midnight Blue = rgb({}, {}, {})", r, g, b);
 }
 
 fn get_midnightblue_color() -> Color{
