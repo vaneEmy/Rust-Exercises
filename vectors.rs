@@ -11,4 +11,13 @@ fn  main() {
 
     println!("Vector d: {:?}", d);
 
+    let mut e: Vec<i32> = Vec::with_capacity(10);
+    println!("Length: {}, Capacity: {}", e.len(), e.capacity());
+
+    for i in 0..10{
+        e.push(i);
+    }
+
+    e.push(11);
+    println!("Vector e: {:?}", e);
 }
