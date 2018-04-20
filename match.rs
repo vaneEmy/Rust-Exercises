@@ -8,4 +8,11 @@ fn main() {
         _ => "Not available",
     };
     println!("{}", tshirt_size);
+
+    let is_allowed = false;
+    let list_type = match is_allowed{
+        true => "Full",
+        false => "Restricted"
+    };
+    println!("{}", list_type);
 }
