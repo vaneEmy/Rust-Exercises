@@ -1,11 +1,14 @@
 fn main(){
-    phrases::greetings::hello();
+    phrases::greet();
 }
 
 mod phrases{
-    pub mod greetings{
-        pub fn hello(){
-            println!("Hello world!");
-        }
+    pub fn greet(){
+        hello();
     }
+
+    fn hello(){
+        println!("Hello, world!");
+    }
+   
 }
