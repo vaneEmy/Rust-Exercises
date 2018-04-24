@@ -1,5 +1,4 @@
-pub mod greetings{
-    pub fn hello(){
-        println!("Hello, World!");
-    }
-}
+pub mod greetings;
+
+//Re - export greetings::hello to phrase
+pub use self::greetings::hello;

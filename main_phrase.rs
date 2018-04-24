@@ -1,5 +1,7 @@
 mod phrase;
 
 fn main(){
-    phrase::greetings::hello();
+
+    // We can call hello() directly from phrase.
+    phrase::hello();
 }
