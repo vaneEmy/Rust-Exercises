@@ -1,0 +1,6 @@
+[package]
+name = "updating_hash_map"
+version = "0.1.0"
+authors = ["vaneEmy <vanvanemily@gmail.com>"]
+
+[dependencies]
