@@ -1,5 +1,5 @@
 [package]
-name = "communicator"
+name = "error_handling_panic"
 version = "0.1.0"
 authors = ["vaneEmy <vanvanemily@gmail.com>"]
 

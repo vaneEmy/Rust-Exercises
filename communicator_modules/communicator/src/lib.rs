@@ -4,8 +4,10 @@ pub mod network;
 
 #[cfg(test)]
 mod test{
+    use super::client;
+    
     #[test] 
-    fn it_workd(){
-        assert_eq!(2 + 2, 4);
+    fn it_works(){
+        client::connect();
     }
 }
