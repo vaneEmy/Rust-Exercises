@@ -5,7 +5,9 @@ pub struct NewsArticle {
     pub content: String,
 }
 pub trait Summary {
-    fn summarize(&self) -> String;
+    fn summarize(&self) -> String{
+        String::from("(Read more...)")
+    }
 }
 
 impl Summary for NewsArticle {
