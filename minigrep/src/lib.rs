@@ -29,7 +29,24 @@ pub fn run(config: Config) -> Result<(), Box<Error>> {
    
     f.read_to_string(&mut contents)?;
     
-    println!("With text:\n{}", contents);
-
     Ok(())
+}
+
+#[cfg(test)]
+mod test{
+    use super::*;
+
+    #[test]
+    fn one_result(){
+        let query = "duct";
+        let contents = "\n
+        Rust:
+        safe, fast, productive.
+        Pick three.";
+
+        assert_eq!(
+            vec!["sage, fast, productive."], 
+            search(query, contents)
+            );
+    }
 }
