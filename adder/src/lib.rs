@@ -19,7 +19,7 @@ fn internal_adder(a: i32, b: i32) -> i32{
 }
 
 pub fn greeting(name: &str) -> String{
-    format!("Hello")
+    format!("Hello {}!", name)
 }
 
 #[cfg(test)]
