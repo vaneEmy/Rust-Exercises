@@ -5,6 +5,8 @@ fn main() {
     for val in v1_iter{
         println!("Got: {}", val);
     }
+
+    v1.iter().map(|x| x + 1);
 }
 #[test]
 fn iterator_demonstration(){
