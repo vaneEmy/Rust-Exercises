@@ -6,7 +6,6 @@ fn main() {
         println!("Got: {}", val);
     }
 
-    v1.iter().map(|x| x + 1);
 }
 #[test]
 fn iterator_demonstration(){
@@ -28,4 +27,13 @@ fn iterator_sum(){
     let total: i32 = v1_iter.sum();
 
     assert_eq!(total, 6);
+}
+
+#[test]
+fn iterator_map(){
+    let v1: Vec<i32> = vec![1, 2, 3];
+
+    let v2: Vec<i32> = v1.iter().map(|x| x + 1).collect();
+
+    assert_eq!(v2, vec![2, 3, 4] );
 }
