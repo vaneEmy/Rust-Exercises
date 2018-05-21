@@ -18,10 +18,10 @@ impl<T>Cacher<T>
 
         fn value(&mut self, arg:u32) -> u32{
             match self.value{
-                Sime(v) => v,
+                Some(v) => v,
                 None =>{
                     let v = (self.calculation)(arg);
-                    self.value = Some(V);
+                    self.value = Some(v);
                     v
                 },
             }
@@ -44,25 +44,25 @@ fn main() {
 
 
 fn generate_workout(intensity: u32, random_number: u32){
-    let expensive_closure = |num| {
+    let mut expensive_result =  Cacher::new(|num| {
         println!("calculating slowly...");
         thread::sleep(Duration::from_secs(2));
         num
-    };
+    });
 
     if intensity < 25 {
         println!("Today, do {} pushups!",
-            expensive_closure(intensity)
+            expensive_result.value(intensity)
         );
         println!("Next, do {} situps!",
-            expensive_closure(intensity)
+            expensive_result.value(intensity)
         );
     }else {
         if random_number == 3{
             println!("Take a break today! Remember to stay hydrated!");
         }else{
             println!("Today, run for {} minutes",
-                expensive_closure(intensity)
+                expensive_result.value(intensity)
             );
         }
     }
