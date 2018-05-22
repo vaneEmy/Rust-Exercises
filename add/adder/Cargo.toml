@@ -7,3 +7,4 @@ authors = ["vaneEmy <vanvanemily@gmail.com>"]
 
 add-one = { path = "../add-one" }
 rand = "0.3.14"
+add-two = { path = "../add-two" }
