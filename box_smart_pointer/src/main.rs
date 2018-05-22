@@ -3,6 +3,8 @@ enum List{
     Nil,
 }
 
+use List::{Cons, Nil};
+
 fn main() {
-    println!("Hello world!");
+    let list = Cons(1, Cons(2, Cons(3, Nil)));
 }
