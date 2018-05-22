@@ -6,3 +6,4 @@ authors = ["vaneEmy <vanvanemily@gmail.com>"]
 [dependencies]
 
 add-one = { path = "../add-one" }
+rand = "0.3.14"
