@@ -1,0 +1,6 @@
+[package]
+name = "drop_trait_pointer"
+version = "0.1.0"
+authors = ["vaneEmy <vanvanemily@gmail.com>"]
+
+[dependencies]
