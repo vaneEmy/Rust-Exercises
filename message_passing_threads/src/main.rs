@@ -9,4 +9,6 @@ fn main() {
         tx.send(val).unwrap();
     });
 
+    let received = rx.recv().unwrap();
+    println!("Got: {}", received);
 }
