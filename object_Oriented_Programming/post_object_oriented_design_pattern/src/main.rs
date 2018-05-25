@@ -1,4 +1,4 @@
-extern crate  blog;
+extern crate blog;
 use blog::Post;
 
 fn main() {
