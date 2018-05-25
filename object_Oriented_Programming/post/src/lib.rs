@@ -11,8 +11,14 @@ impl Post {
         }
     }
 
+    // The add_text method takes a mutable reference to self, 
+    // because we're changing the Post instance that we're calling add_text on.
     pub fn add_text(&mut self, text: &str){
         self.content.push_str(text);
+    }
+
+    pub fn content(&self) -> &str {
+        ""
     }
 }
 
