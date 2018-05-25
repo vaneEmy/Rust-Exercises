@@ -2,6 +2,10 @@ pub trait Draw {
     fn draw(&self);
 }
 
+struct Screen {
+    pub components: Vec<Box<Draw>>,
+}
+
 #[cfg(test)]
 mod tests {
     #[test]
