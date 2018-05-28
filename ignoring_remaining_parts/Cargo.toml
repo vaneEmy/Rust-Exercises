@@ -1,0 +1,6 @@
+[package]
+name = "ignoring_remaining_parts"
+version = "0.1.0"
+authors = ["vaneEmy <vanvanemily@gmail.com>"]
+
+[dependencies]
