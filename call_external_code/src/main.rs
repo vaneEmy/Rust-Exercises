@@ -10,6 +10,6 @@ pub extern "C" fn call_from_c() {
 fn main() {
     unsafe{
         println!("Absolute value f -3 according to C: {}", abs(-3));
-        call_from_c();
     }
+    call_from_c();
 }
