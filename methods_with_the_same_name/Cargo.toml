@@ -1,0 +1,6 @@
+[package]
+name = "methods_with_the_same_name"
+version = "0.1.0"
+authors = ["vaneEmy <vanvanemily@gmail.com>"]
+
+[dependencies]
