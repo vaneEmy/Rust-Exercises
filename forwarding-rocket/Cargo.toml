@@ -1,0 +1,8 @@
+[package]
+name = "forwarding-rocket"
+version = "0.1.0"
+authors = ["vaneEmy <vanvanemily@gmail.com>"]
+
+[dependencies]
+rocket = "0.3.12"
+rocket_codegen = "0.3.12"
