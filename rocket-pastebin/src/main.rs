@@ -1,7 +1,12 @@
 #![feature(plugin)]
 #![plugin(rocket_codegen)]
 
+extern crate rand;
 extern crate rocket;
+
+mod paste_id;
+
+use paste_id::PasteID;
 
 #[get("/")]
 fn index() -> &'static str {
