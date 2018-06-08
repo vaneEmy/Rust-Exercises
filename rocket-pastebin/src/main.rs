@@ -7,6 +7,18 @@ extern crate rocket;
 mod paste_id;
 
 use paste_id::PasteID;
+use std::io;
+use std::path::Path;
+use rocket::Data;
+use std::fs::File;
+use rocket::response::content;
+
+#[get("/<id>")]
+fn retrieve(id: PasteID) -> Option<File> {
+    let filename = format!("upload/{id}", id = id);
+    File::open(&filename).ok()
+}
+
 
 #[get("/")]
 fn index() -> &'static str {
@@ -25,6 +37,22 @@ fn index() -> &'static str {
     "
 }
 
+#[post("/", data = "<paste>")]
+fn upload(paste: Data) -> io::Result<String> {
+    let id = PasteID::new(3);
+    let filename = format!("upload/{id}", id = id);
+    let url = format!("{host}/{id}\n", host = "http://localhost:8000", id = id);
+
+    // Write the paste out to the file and return the URL.
+    paste.stream_to_file(Path::new(&filename))?;
+    Ok(url)
+}
+
+fn rocket() -> rocket::Rocket {
+    rocket::ignite().mount("/", routes![index, upload, retrieve])
+
+}
+
 fn main() {
-    rocket::ignite().mount("/", routes![index]).launch();
+    rocket().launch();
 }
