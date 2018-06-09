@@ -1,4 +1,4 @@
-#[macro_use()]
+#[macro_use]
 extern crate diesel;
 extern crate dotenv;
 
@@ -18,3 +18,4 @@ pub fn establish_connection() -> PgConnection {
     PgConnection::establish(&database_url)
         .expect(&format!("Error connectiong to {}", database_url))
 }
+
