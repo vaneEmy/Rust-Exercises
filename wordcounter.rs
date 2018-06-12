@@ -12,7 +12,7 @@ impl WordStore {
         WordStore ( HashMap::new())
     }
 
-    fn increment(word: &str) {
+    fn increment(&self,word: &str) {
         let key = word.to_string();
         let count = self.0.entry(key).or_insert(0);
         *count += 1;
@@ -20,7 +20,7 @@ impl WordStore {
 }
 
 fn main() {
-    let arguments: vec<String> = env::args().collect();
+    let arguments: Vec<String> = env::args().collect();
     println!("args 1 {}", arguments[1]);
 
     let filename = arguments[1].clone();
