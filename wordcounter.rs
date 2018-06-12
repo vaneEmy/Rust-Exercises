@@ -8,14 +8,20 @@ use std::collections::HashMap;
 struct WordStore (HashMap<String, u64>);
 
 impl WordStore {
-    fn new()  {
+    fn new() -> WordStore {
         WordStore ( HashMap::new())
     }
 
-    fn increment(&self,word: &str) {
+    fn increment(&mut self, word: &str) {
         let key = word.to_string();
         let count = self.0.entry(key).or_insert(0);
         *count += 1;
+    }
+
+    fn display(self){
+        for (key, value) in self.0.iter() {
+            println!("{}: {}", key, value);
+        }
     }
 }
 
@@ -28,7 +34,7 @@ fn main() {
     let file = File::open(filename).expect("could no open file");
     let reader = BufReader::new(file);
 
-    let word_store = WordStore::new();
+    let mut word_store = WordStore::new();
 
     for line in reader.lines() {
         let line = line.expect("Could no read line");
