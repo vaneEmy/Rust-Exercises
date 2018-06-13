@@ -19,8 +19,8 @@ impl WordStore {
     }
 
     fn display(self){
-        for (key, value) in self.0.iter() {
-            println!("{}: {}", key, value);
+        for  value in self.0.values() {
+            println!(" {}",value);
         }
     }
 }
@@ -35,7 +35,6 @@ fn main() {
     let reader = BufReader::new(file);
 
     let mut word_store = WordStore::new();
-
     for line in reader.lines() {
         let line = line.expect("Could no read line");
         let words = line.split(" ");
