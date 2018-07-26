@@ -1,0 +1,7 @@
+[package]
+name = "hello-world-actix-web"
+version = "0.1.0"
+authors = ["vane"]
+
+[dependencies]
+actix-web = "0.7"
